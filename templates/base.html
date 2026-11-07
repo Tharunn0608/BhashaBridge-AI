@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% block title %}BhashaBridge AI{% endblock %} · BhashaBridge AI</title>
+  <meta name="description" content="BhashaBridge AI - a multilingual voice assistant for Indian students, powered by Gnani AI Prisma and Timbre.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='9' fill='%234f46e5'/%3E%3Cpath d='M6 20c4-8 7-8 10 0s6 8 10 0' stroke='white' stroke-width='3' fill='none' stroke-linecap='round'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body data-page="{{ page }}">
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="nav">
+    <div class="wrap nav-inner">
+      <a class="brand" href="{{ url_for('index') }}" aria-label="BhashaBridge AI home">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 32 32" width="22" height="22"><path d="M5 21c4.5-9 8-9 11 0s6.500 9 11 0" stroke="#fff" stroke-width="3.200" fill="none" stroke-linecap="round"/></svg>
+        </span>
+        <span class="brand-name">Bhasha<b>Bridge</b> AI</span>
+      </a>
+      <button class="nav-toggle" aria-label="Menu" aria-expanded="false" data-nav-toggle>
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="nav-links" data-nav aria-label="Main">
+        <a href="{{ url_for('index') }}" class="{{ 'on' if page == 'home' }}">Home</a>
+        <a href="{{ url_for('dashboard') }}" class="{{ 'on' if page == 'dashboard' }}">Assistant</a>
+        <a href="{{ url_for('student') }}" class="{{ 'on' if page == 'student' }}">Student help</a>
+        <a href="{{ url_for('about') }}" class="{{ 'on' if page == 'about' }}">About</a>
+        <button class="health-pill" type="button" data-health-pill aria-haspopup="true" aria-expanded="false" title="API status">
+          <span class="dot dot-idle" data-health-dot></span><span data-health-text>Checking…</span>
+        </button>
+      </nav>
+    </div>
+    <div class="health-pop wrap" data-health-pop hidden>
+      <div class="card health-card">
+        <h3>API status</h3>
+        <ul class="health-list" data-health-list></ul>
+        <p class="muted small">“Ready” means a key or endpoint is configured. It turns to “Working” only after a real request succeeds.</p>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    {% block content %}{% endblock %}
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer-inner">
+      <p><b>BhashaBridge AI</b> · Breaking Language Barriers Through Voice Intelligence.</p>
+      <p class="muted small">Speech recognition by <b>Gnani Prisma</b> and voice by <b>Gnani Timbre</b>. Built for the Great Indian AI Internship Challenge. Not affiliated with or endorsed by Gnani.ai.</p>
+    </div>
+  </footer>
+
+  <div class="toasts" data-toasts aria-live="polite"></div>
+  <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+  {% block scripts %}{% endblock %}
+</body>
+</html>

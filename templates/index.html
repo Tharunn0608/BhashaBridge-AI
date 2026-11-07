@@ -1,0 +1,63 @@
+{% extends "base.html" %}
+{% block title %}Home{% endblock %}
+{% block content %}
+<section class="hero">
+  <div class="wrap hero-inner">
+    <div class="hero-copy">
+      <span class="eyebrow">Voice AI for India · Powered by Gnani Prisma &amp; Timbre</span>
+      <h1>Breaking language barriers <span class="grad">through voice intelligence.</span></h1>
+      <p class="lead">Speak in English, Hindi, Kannada, Tamil or Telugu. BhashaBridge AI listens, understands, and answers back in a natural voice, built to help students get answers in the language they think in.</p>
+      <div class="cta-row">
+        <a class="btn btn-primary btn-lg" href="{{ url_for('dashboard') }}">Start conversation</a>
+        <a class="btn btn-ghost btn-lg" href="{{ url_for('student') }}">Student help</a>
+      </div>
+      <ul class="hero-points">
+        <li>Real Gnani speech-to-text and text-to-speech</li>
+        <li>Your API key stays on the server</li>
+        <li>Recordings are never stored</li>
+      </ul>
+    </div>
+    <div class="hero-visual" aria-hidden="true">
+      <div class="phone card">
+        <div class="bubble user">ನನಗೆ ಪರೀಕ್ಷೆಗೆ ಹೇಗೆ ತಯಾರಿ ಮಾಡಬೇಕು?</div>
+        <div class="bubble ai">Start early, list every topic, and practise with questions…</div>
+        <div class="wave"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+      </div>
+      <div class="float f1 card">🎙️ Prisma</div>
+      <div class="float f2 card">🔊 Timbre</div>
+    </div>
+  </div>
+</section>
+
+<section class="wrap section">
+  <h2 class="section-title">How it works</h2>
+  <ol class="steps">
+    <li class="card"><span class="step-n">1</span><h3>Speak</h3><p>Choose a language and tap the mic. Your browser records a short clip.</p></li>
+    <li class="card"><span class="step-n">2</span><h3>Transcribe</h3><p>The clip goes to our server, then to <b>Gnani Prisma</b> which returns the text.</p></li>
+    <li class="card"><span class="step-n">3</span><h3>Reason</h3><p>A reasoning model, or the student FAQ, writes a helpful answer.</p></li>
+    <li class="card"><span class="step-n">4</span><h3>Listen</h3><p><b>Gnani Timbre</b> turns the answer into natural speech you can replay.</p></li>
+  </ol>
+</section>
+
+<section class="wrap section">
+  <h2 class="section-title">Features</h2>
+  <div class="grid3">
+    <article class="card feat"><h3>Multilingual voice</h3><p>English, Hindi, Kannada, Tamil and Telugu, all supported by both Prisma and Timbre.</p></article>
+    <article class="card feat"><h3>Context-aware chat</h3><p>Follow-up questions work. History is saved locally and can be cleared any time.</p></article>
+    <article class="card feat"><h3>Student assistance</h3><p>Searchable FAQ on courses, exams, campus life and study help. Demo data you can edit.</p></article>
+    <article class="card feat"><h3>Type or speak</h3><p>Prefer typing? Every feature works with text too.</p></article>
+    <article class="card feat"><h3>Replay and copy</h3><p>Replay any answer in audio or copy the text with one tap.</p></article>
+    <article class="card feat"><h3>Private by design</h3><p>No keys in the browser. Voice clips are processed in memory and never saved.</p></article>
+  </div>
+</section>
+
+<section class="wrap section">
+  <div class="card cta-card">
+    <div>
+      <h2>Ready to try it?</h2>
+      <p class="muted">Open the assistant and ask a question in your own language.</p>
+    </div>
+    <a class="btn btn-primary btn-lg" href="{{ url_for('dashboard') }}">Open the assistant</a>
+  </div>
+</section>
+{% endblock %}

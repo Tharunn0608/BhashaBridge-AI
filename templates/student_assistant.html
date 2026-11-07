@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% block title %}Student help{% endblock %}
+{% block content %}
+<div class="wrap page-head">
+  <span class="eyebrow">Student assistance</span>
+  <h1>Answers for students</h1>
+  <p class="lead">Browse common questions, search by keyword, or ask the assistant in your own language.</p>
+</div>
+
+<div class="wrap student">
+  <section class="faq-col" aria-label="Frequently asked questions">
+    <div class="demo-banner" role="note" data-demo-notice>
+      <span data-notice-text>Loading…</span>
+    </div>
+    <form class="search card" data-faq-search role="search">
+      <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="currentColor" d="M10 4a6 6 0 1 0 3.470 10.900l4.820 4.810a1 1 0 0 0 1.420-1.420l-4.810-4.810A6 6 0 0 0 10 4Zm-4 6a4 4 0 1 1 8 0 4 4 0 0 1-8 0Z"/></svg>
+      <input type="search" data-faq-q placeholder="Search: exams, library, scholarship…" aria-label="Search FAQs">
+    </form>
+    <div class="chips cats" data-cats role="tablist" aria-label="Categories"></div>
+    <div class="faq-list" data-faq-list></div>
+  </section>
+
+  <section class="ask-col" aria-label="Ask the assistant">
+    {% set chat_mode = 'student' %}
+    {% include "_chat.html" %}
+  </section>
+</div>
+{% endblock %}
+{% block scripts %}
+<script src="{{ url_for('static', filename='js/voice.js') }}"></script>
+<script src="{{ url_for('static', filename='js/chat.js') }}"></script>
+<script src="{{ url_for('static', filename='js/student.js') }}"></script>
+{% endblock %}

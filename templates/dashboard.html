@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% block title %}Assistant{% endblock %}
+{% block content %}
+<div class="wrap dash">
+  <div class="dash-main">
+    {% set chat_mode = 'assistant' %}
+    {% include "_chat.html" %}
+  </div>
+  <aside class="dash-side">
+    <div class="card side-card">
+      <h3>Pipeline</h3>
+      <ol class="pipe">
+        <li><b>Prisma</b> converts your speech to text</li>
+        <li><b>Reasoning</b> writes the answer</li>
+        <li><b>Timbre</b> speaks it back</li>
+      </ol>
+      <div class="engine-box">
+        <p class="small muted">Reasoning engine</p>
+        <p data-side-engine class="engine-name">Checking…</p>
+      </div>
+    </div>
+    <div class="card side-card">
+      <h3>Tips</h3>
+      <ul class="tips">
+        <li>Speak for 2–20 seconds, close to the microphone.</li>
+        <li>Pick your language <i>before</i> recording.</li>
+        <li>Use Chrome, Edge, Firefox or Safari on https or localhost.</li>
+      </ul>
+    </div>
+    <div class="card side-card privacy" id="privacy">
+      <h3>Privacy</h3>
+      <p class="small">Voice recordings are sent to Gnani for transcription and are <b>not saved</b> by this app. Chat text is stored in a local database on the machine running this app, tied to a random ID in your browser. Press <b>Clear</b> to delete it. Your API key never reaches the browser.</p>
+    </div>
+  </aside>
+</div>
+{% endblock %}
+{% block scripts %}
+<script src="{{ url_for('static', filename='js/voice.js') }}"></script>
+<script src="{{ url_for('static', filename='js/chat.js') }}"></script>
+{% endblock %}

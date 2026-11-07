@@ -1,0 +1,21 @@
+# Environment secrets
+.env
+.env.*
+!.env.example
+
+# Python
+venv/
+.venv/
+__pycache__/
+*.pyc
+
+# Database and runtime
+instance/
+*.db
+
+# Testing and editor
+.pytest_cache/
+.vscode/
+
+# Archives
+*.zip

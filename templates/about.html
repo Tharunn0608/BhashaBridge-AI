@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+{% block title %}About{% endblock %}
+{% block content %}
+<div class="wrap page-head">
+  <span class="eyebrow">About</span>
+  <h1>Voice AI that speaks your language</h1>
+  <p class="lead">BhashaBridge AI is a multilingual voice assistant for Indian students and anyone who prefers to communicate in their regional language.</p>
+</div>
+
+<div class="wrap about-grid">
+  <article class="card prose">
+    <h2>Project objective</h2>
+    <p>Many students are most comfortable in their mother tongue, yet most digital help is English-first. BhashaBridge AI lets them <b>speak</b> a question, get a clear <b>written</b> answer, and <b>hear</b> it back, lowering the barrier to information.</p>
+    <p>It was built for the <b>Great Indian AI Internship Challenge</b> by Gnani AI as a practical demonstration of multilingual voice processing.</p>
+  </article>
+
+  <article class="card prose">
+    <h2>Gnani AI integration</h2>
+    <ul>
+      <li><b>Prisma</b> (speech-to-text): <code>POST /stt/v3</code> on the Vachana API, with the language you choose. Supports English, Hindi, Kannada, Tamil and Telugu (among others).</li>
+      <li><b>Timbre</b> (text-to-speech): <code>POST /api/v1/tts/inference</code> with a language-matched voice from the official voice catalog.</li>
+      <li><b>Reasoning</b>: any OpenAI-compatible model you configure (for example a self-hosted Gnani Evon), with a demonstration FAQ fallback. Every reply is labelled with its source.</li>
+    </ul>
+    <p class="muted small">Only languages documented as supported by both Prisma and Timbre are enabled. This project is independent and is not endorsed by Gnani.ai.</p>
+  </article>
+
+  <article class="card prose">
+    <h2>Technology stack</h2>
+    <div class="chips static">
+      <span>Python</span><span>Flask</span><span>SQLite</span><span>Requests</span><span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>MediaRecorder</span><span>Web Audio</span><span>Gnani Prisma</span><span>Gnani Timbre</span>
+    </div>
+    <p>The browser records audio, converts it to 16 kHz mono WAV in memory, and sends it to the Flask backend. The backend is the only place the API key exists.</p>
+  </article>
+
+  <article class="card prose">
+    <h2>Team</h2>
+    <p><b>Solo project</b> by the project author. Edit this section in <code>templates/about.html</code> to add your name, college and links.</p>
+  </article>
+
+  <article class="card prose wide">
+    <h2>Privacy and limits</h2>
+    <ul>
+      <li>Voice clips are held in memory only for the request and are never written to disk by this app.</li>
+      <li>Conversation text is stored locally in SQLite and can be cleared with the Clear button.</li>
+      <li>FAQ content is <b>demonstration data</b>, not real college policy, dates or fees.</li>
+      <li>AI answers can be wrong. Verify important information with your college or official sources.</li>
+    </ul>
+  </article>
+</div>
+{% endblock %}

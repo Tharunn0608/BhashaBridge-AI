@@ -1,0 +1,51 @@
+{# Reusable chat widget. Set chat_mode ("assistant" or "student") before including. #}
+<section class="card chat" data-chat data-mode="{{ chat_mode }}" aria-label="Conversation">
+  <div class="chat-head">
+    <div class="chat-title">
+      <span class="avatar ai" aria-hidden="true">B</span>
+      <div>
+        <h2>{{ 'Student assistant' if chat_mode == 'student' else 'BhashaBridge assistant' }}</h2>
+        <p class="muted small" data-engine>Speak or type in your language</p>
+      </div>
+    </div>
+    <div class="chat-tools">
+      <label class="select-wrap">
+        <span class="sr-only">Language</span>
+        <select data-language aria-label="Language"></select>
+      </label>
+      <button class="btn btn-ghost btn-sm" type="button" data-clear title="Delete this conversation">Clear</button>
+    </div>
+  </div>
+
+  <div class="messages" data-messages role="log" aria-live="polite">
+    <div class="empty" data-empty>
+      <div class="empty-orb" aria-hidden="true"></div>
+      <h3>Namaste! Ask me anything.</h3>
+      <p class="muted">Tap the microphone and speak, or type below. Try one of these:</p>
+      <div class="chips" data-suggestions></div>
+    </div>
+  </div>
+
+  <div class="composer">
+    <div class="rec-banner" data-rec-banner hidden>
+      <span class="rec-dot"></span>
+      <span data-rec-text>Listening…</span>
+      <span class="rec-time" data-rec-time>0:00</span>
+    </div>
+    <div class="composer-row">
+      <button class="mic" type="button" data-mic aria-label="Start recording" aria-pressed="false">
+        <span class="mic-ring r1"></span><span class="mic-ring r2"></span>
+        <svg class="ico-mic" viewBox="0 0 24 24" width="26" height="26" aria-hidden="true"><path fill="currentColor" d="M12 15a4 4 0 0 0 4-4V6a4 4 0 0 0-8 0v5a4 4 0 0 0 4 4Zm6-4a1 1 0 1 1 2 0 8 8 0 0 1-7 7.940V21h3a1 1 0 1 1 0 2H8a1 1 0 1 1 0-2h3v-2.060A8 8 0 0 1 4 11a1 1 0 1 1 2 0 6 6 0 0 0 12 0Z"/></svg>
+        <svg class="ico-stop" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><rect x="6" y="6" width="12" height="12" rx="3" fill="currentColor"/></svg>
+        <span class="spinner" aria-hidden="true"></span>
+      </button>
+      <form class="text-form" data-form autocomplete="off">
+        <input type="text" data-input maxlength="1000" placeholder="Type your question…" aria-label="Type your question">
+        <button class="btn btn-primary send" type="submit" data-send aria-label="Send">
+          <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="currentColor" d="M3.400 20.400 21 12 3.400 3.600 3.390 10.100 15 12 3.390 13.900l.01 6.500Z"/></svg>
+        </button>
+      </form>
+    </div>
+    <label class="autoplay"><input type="checkbox" data-autoplay checked> Speak replies aloud</label>
+  </div>
+</section>

@@ -1,0 +1,131 @@
+{
+  "_notice": "DEMONSTRATION DATA ONLY. These entries are generic examples, not real college policies, dates or fees. Edit database/faq_data.json to add your own institution's verified information; changes load automatically.",
+  "categories": [
+    {"id": "courses", "name": "Courses"},
+    {"id": "exams", "name": "Examinations"},
+    {"id": "campus", "name": "Campus life"},
+    {"id": "study", "name": "Study help"},
+    {"id": "guidance", "name": "Student guidance"}
+  ],
+  "faqs": [
+    {
+      "id": "courses-syllabus",
+      "category": "courses",
+      "question": "Where can I find the syllabus for my course?",
+      "answer": "Demo information: syllabus documents are usually published by your department or on the college learning portal. Ask your course teacher or the department office for the latest official copy.",
+      "keywords": ["syllabus", "curriculum", "course content", "पाठ्यक्रम", "ಪಠ್ಯಕ್ರಮ", "பாடத்திட்டம்", "సిలబస్"]
+    },
+    {
+      "id": "courses-electives",
+      "category": "courses",
+      "question": "How do I choose between elective courses?",
+      "answer": "Demo information: compare each elective's topics with your interests and career goals, check any prerequisites, and talk to seniors or a faculty mentor. Confirm the official selection process with your department.",
+      "keywords": ["elective", "electives", "choose course", "optional subject", "ऐच्छिक", "ಐಚ್ಛಿಕ", "விருப்பப் பாடம்", "ఎలక్టివ్"]
+    },
+    {
+      "id": "courses-credits",
+      "category": "courses",
+      "question": "What are credits in a course?",
+      "answer": "Demo information: credits are a way of measuring the workload of a course. Programmes usually require a total number of credits to graduate. Your college handbook gives the exact numbers for your programme.",
+      "keywords": ["credit", "credits", "credit system", "क्रेडिट", "ಕ್ರೆಡಿಟ್", "கிரெடிட்", "క్రెడిట్"]
+    },
+    {
+      "id": "exams-prepare",
+      "category": "exams",
+      "question": "How should I prepare for my exams?",
+      "answer": "Start early and list every topic. Split the topics across the days you have, revise actively by solving questions and explaining ideas aloud, practise past papers if available, and keep time for sleep. Review difficult topics last, a day before the exam.",
+      "keywords": ["prepare", "preparation", "revision", "revise", "exam tips", "परीक्षा की तैयारी", "ಪರೀಕ್ಷೆ ತಯಾರಿ", "தேர்வு தயாரிப்பு", "పరీక్ష తయారీ"]
+    },
+    {
+      "id": "exams-dayneeds",
+      "category": "exams",
+      "question": "What do I usually need on exam day?",
+      "answer": "Demo information: colleges commonly ask for a hall ticket or admit card and a photo ID, plus basic stationery. Your exam office notice lists exactly what is allowed, so check it a day before.",
+      "keywords": ["hall ticket", "admit card", "exam day", "id card", "प्रवेश पत्र", "ಹಾಲ್ ಟಿಕೆಟ್", "ஹால் டிக்கெட்", "హాల్ టికెట్"]
+    },
+    {
+      "id": "exams-timetable",
+      "category": "exams",
+      "question": "Where can I find my exam timetable?",
+      "answer": "Demo information: exam timetables are usually published on the college notice board or portal by the examination office. I do not have real dates, so please check the official notice.",
+      "keywords": ["timetable", "time table", "schedule", "date sheet", "exam date", "exam dates", "परीक्षा समय सारणी", "समय सारणी", "ವೇಳಾಪಟ್ಟಿ", "அட்டவணை", "టైమ్‌టేబుల్", "పరీక్ష తేదీ"]
+    },
+    {
+      "id": "exams-revaluation",
+      "category": "exams",
+      "question": "What can I do if I am unhappy with my exam result?",
+      "answer": "Demo information: many institutions allow a re-evaluation or paper-viewing request within a limited window after results. Ask your examination office about the official process, deadline and any fee.",
+      "keywords": ["revaluation", "re-evaluation", "result", "marks", "recheck", "पुनर्मूल्यांकन", "ಮರುಮೌಲ್ಯಮಾಪನ", "மறுமதிப்பீடு", "రీవాల్యుయేషన్"]
+    },
+    {
+      "id": "campus-attendance",
+      "category": "campus",
+      "question": "How is attendance usually handled?",
+      "answer": "Demo information: many colleges require a minimum attendance percentage to appear in exams. The exact percentage and the rules for medical leave differ by college, so check your handbook or ask your department office.",
+      "keywords": ["attendance", "absent", "leave", "उपस्थिति", "हाजिरी", "ಹಾಜರಾತಿ", "வருகைப்பதிவு", "హాజరు"]
+    },
+    {
+      "id": "campus-library",
+      "category": "campus",
+      "question": "How do I use the college library?",
+      "answer": "Demo information: libraries typically need your student ID to borrow books and have rules on loan periods and late returns. Ask the librarian for the real timings, limits and digital resources.",
+      "keywords": ["library", "books", "borrow", "पुस्तकालय", "ಗ್ರಂಥಾಲಯ", "நூலகம்", "గ్రంథాలయం"]
+    },
+    {
+      "id": "campus-hostel",
+      "category": "campus",
+      "question": "How can I find out about hostel accommodation?",
+      "answer": "Demo information: hostel rules, availability and fees are set by each institution. Contact the hostel office or warden to learn the application process and what to carry.",
+      "keywords": ["hostel", "accommodation", "dormitory", "room", "छात्रावास", "ಹಾಸ್ಟೆಲ್", "ವಸತಿ ನಿಲಯ", "விடுதி", "హాస్టల్"]
+    },
+    {
+      "id": "campus-fees",
+      "category": "campus",
+      "question": "Where can I find fee payment details?",
+      "answer": "Demo information: fee amounts, due dates and payment methods come from your college accounts office. I do not have real figures, so please check the official fee notice or ask the accounts office.",
+      "keywords": ["fee", "fees", "tuition", "payment", "pay fees", "शुल्क", "फीस", "ಶುಲ್ಕ", "ಫೀಸ್", "கட்டணம்", "ఫీజు", "ఫీజులు"]
+    },
+    {
+      "id": "campus-scholarship",
+      "category": "campus",
+      "question": "How do I find scholarships?",
+      "answer": "Demo information: look at your college scholarship cell, the government scholarship portals for your state and category, and notices from your department. Check eligibility and deadlines on the official pages.",
+      "keywords": ["scholarship", "scholarships", "financial aid", "छात्रवृत्ति", "ವಿದ್ಯಾರ್ಥಿವೇತನ", "உதவித்தொகை", "స్కాలర్‌షిప్", "ఉపకార వేతనం"]
+    },
+    {
+      "id": "study-plan",
+      "category": "study",
+      "question": "How can I build a simple study plan?",
+      "answer": "List your subjects and deadlines, estimate hours each needs, then schedule short focused sessions of 25 to 50 minutes with breaks. Put the hardest subject in your best energy time, and leave one buffer day each week.",
+      "keywords": ["study plan", "study schedule", "plan my study", "routine", "अध्ययन योजना", "ಅಧ್ಯಯನ ಯೋಜನೆ", "படிப்பு திட்டம்", "చదువు ప్రణాళిక"]
+    },
+    {
+      "id": "study-focus",
+      "category": "study",
+      "question": "How do I stay focused while studying?",
+      "answer": "Keep your phone out of reach, study in the same quiet place, and work in short timed sessions with a clear goal for each. Take real breaks, drink water, and write down distracting thoughts to handle later.",
+      "keywords": ["focus", "concentrate", "concentration", "distracted", "procrastination", "ध्यान", "ಏಕಾಗ್ರತೆ", "கவனம்", "ఏకాగ్రత"]
+    },
+    {
+      "id": "study-notes",
+      "category": "study",
+      "question": "What is a good way to take notes?",
+      "answer": "Write in your own words, keep headings and short points, and add questions in the margin. Review your notes within a day and turn them into practice questions, which helps memory far more than rereading.",
+      "keywords": ["notes", "note taking", "note-taking", "नोट्स", "ಟಿಪ್ಪಣಿ", "குறிப்புகள்", "నోట్స్"]
+    },
+    {
+      "id": "guidance-career",
+      "category": "guidance",
+      "question": "How can I explore career options?",
+      "answer": "Talk to seniors and alumni, try small projects or internships, and look at what skills job postings ask for in fields you like. Your college placement or career cell can tell you about real opportunities.",
+      "keywords": ["career", "careers", "placement", "placements", "job", "internship", "कैरियर", "नौकरी", "ವೃತ್ತಿ", "ಉದ್ಯೋಗ", "வேலைவாய்ப்பு", "ఉద్యోగం", "కెరీర్"]
+    },
+    {
+      "id": "guidance-support",
+      "category": "guidance",
+      "question": "Who can I talk to if I feel overwhelmed?",
+      "answer": "You are not alone. Talk to a trusted friend, a faculty mentor, or your college counselling cell. If you ever feel unsafe or in crisis, contact a local mental health helpline or someone you trust right away.",
+      "keywords": ["overwhelmed", "stress", "stressed", "anxious", "counsellor", "counselor", "mentor", "तनाव", "ಒತ್ತಡ", "மன அழுத்தம்", "ఒత్తిడి"]
+    }
+  ]
+}
